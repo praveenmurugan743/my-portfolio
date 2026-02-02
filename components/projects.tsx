@@ -39,7 +39,7 @@ const Projects = (): JSX.Element => {
           </p>
           <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
             <a
-              href="https://praveenm09081999.github.io/Connected-Sinks-Vitejs/"
+              href="https://praveenmurugan743.github.io/Connected-Sinks-Vitejs/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 dark:text-blue-400 hover:underline mr-4 font-medium"
@@ -47,7 +47,7 @@ const Projects = (): JSX.Element => {
               Live Demo
             </a>
             <a
-              href="https://github.com/praveenm09081999/Connected-Sinks-Vitejs"
+              href="https://github.com/praveenmurugan743/Connected-Sinks-Vitejs"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 dark:text-blue-400 hover:underline font-medium"
@@ -69,7 +69,7 @@ const Projects = (): JSX.Element => {
           </p>
           <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600 flex gap-4">
             <a
-              href="https://praveenm09081999.github.io/tree_structure/"
+              href="https://praveenmurugan743.github.io/tree_structure/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 dark:text-blue-400 hover:underline font-medium"
@@ -78,7 +78,7 @@ const Projects = (): JSX.Element => {
             </a>
             <div className="relative group">
               <a
-                href="https://github.com/praveenm09081999/tree_structure"
+                href="https://github.com/praveenmurugan743/tree_structure"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-500 dark:text-blue-400 hover:underline font-medium"
@@ -119,7 +119,7 @@ const Projects = (): JSX.Element => {
 
           <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
             <a
-              href="https://github.com/praveenm09081999/hops"
+              href="https://github.com/praveenmurugan743/hops"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 dark:text-blue-400 hover:underline font-medium"
@@ -151,7 +151,7 @@ const Projects = (): JSX.Element => {
           </p>
           <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
             <a
-              href="https://github.com/praveenm09081999/Kaitenzushi"
+              href="https://github.com/praveenmurugan743/Kaitenzushi"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 dark:text-blue-400 hover:underline font-medium"
@@ -177,7 +177,7 @@ const Projects = (): JSX.Element => {
 
           <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
             <a
-              href="https://github.com/praveenm09081999/cafeteria"
+              href="https://github.com/praveenmurugan743/cafeteria"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 dark:text-blue-400 hover:underline font-medium mr-4"
@@ -204,7 +204,7 @@ const Projects = (): JSX.Element => {
 
           <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
             <a
-              href="https://github.com/praveenm09081999/director_of_photography1"
+              href="https://github.com/praveenmurugan743/director_of_photography1"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 dark:text-blue-400 hover:underline font-medium"
@@ -240,7 +240,7 @@ const Projects = (): JSX.Element => {
 
           <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
             <a
-              href="https://github.com/praveenm09081999/stack_stabilization1"
+              href="https://github.com/praveenmurugan743/stack_stabilization1"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 dark:text-blue-400 hover:underline font-medium"

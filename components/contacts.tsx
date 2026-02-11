@@ -38,7 +38,7 @@ const Contacts = (): JSX.Element => {
 
   const handleEmailSend = async (e: FormEvent) => {
     e.preventDefault()
-    fetch("http://143.47.236.98:5000/webhook", {
+    fetch("https://nonbureaucratically-obovoid-denese.ngrok-free.dev/webhook", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

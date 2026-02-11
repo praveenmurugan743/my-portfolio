@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
-import { JSX } from "react";
+import { ChangeEvent, FormEvent, JSX, useState } from "react";
 import { FaLinkedin, FaEnvelope, FaPhone, FaGlobe } from "react-icons/fa";
 
 const Contacts = (): JSX.Element => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
   const socialLinks = [
     {
       icon: <FaLinkedin />,
@@ -21,6 +27,29 @@ const Contacts = (): JSX.Element => {
       url: "https://sites.google.com/view/praveenmurugan/",
     },
   ];
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleEmailSend = async (e: FormEvent) => {
+    e.preventDefault()
+    fetch("http://143.47.236.98:5000/webhook", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message
+      })
+    });
+  }
 
   return (
     <section className="px-8 py-20" id="contact">
@@ -58,13 +87,17 @@ const Contacts = (): JSX.Element => {
 
       {/* Contact Form */}
       <div className="flex flex-col items-center">
-        <form className="flex flex-col w-full md:w-1/2 gap-4 text-gray-400">
+        <form className="flex flex-col w-full md:w-1/2 gap-4 text-gray-400" onSubmit={handleEmailSend}>
           <motion.input
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
             className="p-3 border rounded-xl dark:bg-gray-800 dark:border-gray-700"
             placeholder="Your Name"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
+            required
           />
           <motion.input
             initial={{ opacity: 0, x: -20 }}
@@ -73,6 +106,9 @@ const Contacts = (): JSX.Element => {
             className="p-3 border rounded-xl dark:bg-gray-800 dark:border-gray-700"
             placeholder="Email"
             type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
           />
           <motion.textarea
             initial={{ opacity: 0, x: -20 }}
@@ -81,13 +117,16 @@ const Contacts = (): JSX.Element => {
             className="p-3 border rounded-xl dark:bg-gray-800 dark:border-gray-700"
             placeholder="Message"
             rows={4}
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
           />
           <motion.button
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
             className="bg-indigo-600 text-white p-3 rounded-xl hover:bg-indigo-700 transition-colors"
-            type="button"
+            type="submit"
           >
             Send Message
           </motion.button>
